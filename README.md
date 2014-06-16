@@ -33,9 +33,8 @@ Monaca、GoogleMaps、NIFTY Cloud mobile backendを使ったサンプルアプ�
 
 使い方
 --------------------
-0. このリポジトリのファイル群を**ZIP形式**で取得する
 1. [Monaca](http://monaca.mobi/ja/)にログインする
-2. "新しいプロジェクト"＞"プロジェクトをインポート"＞"プロジェクトのパッケージをアップロード"の順で選択し、最初に取得したZIPファイルをインポートする
+2. "新しいプロジェクト"＞"プロジェクトをインポート"＞"URLを指定してインポート"で「https://github.com/ndyuya/monaca-location-memo/archive/master.zip」をインポートする
 3. プロジェクト名はご自由にどうぞ
 4. インポートが完了するとプロジェクトリストに追加されているので"IDEを起動"する
 5. index.htmlの10行目で読み込んでいるSDKのURLに記載されている**YOUR_GOOGLE_API_BROWSER_KEY**の部分を準備で取得したGoogle API用のAPI keyに置き換える
