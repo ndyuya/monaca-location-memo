@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="plugins/plugin-loader.js"></script>
+  <link rel="stylesheet" href="plugins/plugin-loader.css">
+  
+  <!-- Google Maps Javascript SDK ("YOUR_GOOGLE_API_BROWSER_KEY"を置き換えてください) -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_BROWSER_KEY&sensor=false" type="text/javascript" charset="UTF-8"></script>
+  <!-- NIFTY Cloud mobile backend javascript SDK -->
+  <script src="js/ncmb-latest.min.js"></script>
+  
+  <script src="js/app.js"></script>
+  <script>
+    monaca.viewport({width: 320});
+  </script>
+</head>
+<body>
+  <!-- TOP Page -->
+  <div data-role="page" id="TopPage"> 
+    <header data-role="header" data-position="fixed">
+      <h1>Location Memo</h1>
+      <a href="#AddPage" data-icon="plus" class="ui-btn-right">Add</a>
+    </header>
+  	<section data-role="content">
+      <ul id="TopListView" data-role="listview"
+        data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-split-icon="delete">
+      </ul>
+  	</section> 
+  </div> 
+  
+  <!-- Add Memo Page -->
+  <div data-role="page" id="AddPage">
+    <header data-role="header" data-position="fixed">
+      <a data-role="button" data-rel="back" data-icon="back">Back</a>
+      <h1>Location Memo</h1>
+    </header> 
+    <section data-role="content">
+      <label for="Location">MEMO:</label>
+      <textarea id="Location"></textarea>
+
+      <!-- メモ追加ページの地図表示領域 -->
+      <div id="addMapCanvas" style="width:100%; height:300px;"></div>
+
+      <a data-role="button" data-icon="check" id="SaveBtn">Save</a>
+    </section>
+  </div>
+  
+  <!-- Detail Page -->
+  <div data-role="page" id="ShowPage">
+    <header data-role="header" data-position="fixed">
+      <a data-role="button" data-rel="back" data-icon="back">Back</a>
+      <h1></h1>
+    </header> 
+    <section data-role="content">
+      <p></p>
+      
+      <!-- メモ詳細ページの地図表示領域 -->
+      <div id="detailMapCanvas" style="width:100%; height:400px;"></div>
+
+    </section>
+  </div>
+</body>
+</html>
